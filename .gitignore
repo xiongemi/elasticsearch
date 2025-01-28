@@ -72,3 +72,7 @@ x-pack/plugin/esql/src/main/generated-src/generated/
 
 # JEnv
 .java-version
+
+.nx/installation
+.nx/cache
+.nx/workspace-data

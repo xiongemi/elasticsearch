@@ -236,6 +236,9 @@ subprojects { proj ->
 }
 
 allprojects {
+  apply {
+      plugin("project-report")
+  }
   // We disable this plugin for now till we shaked out the issues we see
   // e.g. see https://github.com/elastic/elasticsearch/issues/72169
   // apply plugin:'elasticsearch.internal-test-rerun'
@@ -491,3 +494,16 @@ tasks.register("spotlessApply").configure {
   dependsOn gradle.includedBuild('build-tools').task(':reaper:spotlessApply')
   dependsOn gradle.includedBuild('build-tools-internal').task(':spotlessApply')
 }
+
+
+tasks.register("projectReportAll") {
+        // All project reports of subprojects
+        allprojects.forEach {
+            dependsOn(it.tasks.getAt("projectReport"))
+        }
+    
+        // All projectReportAll of included builds
+        gradle.includedBuilds.forEach {
+            dependsOn(it.task(":projectReportAll"))
+        }
+    }

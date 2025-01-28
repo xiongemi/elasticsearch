@@ -24,5 +24,6 @@
       "default",
       "!{projectRoot}/src/test/**/*"
     ]
-  }
+  },
+  "nxCloudId": "67982722511d6c3949146f0e"
 }

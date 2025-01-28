@@ -18,7 +18,7 @@ import java.lang.management.ManagementFactory
 import java.time.LocalDateTime
 
 // Resolving this early to avoid issues with the build scan plugin in combination with the configuration cache usage
-def taskNames = gradle.startParameter.taskNames.join(' ')
+/* def taskNames = gradle.startParameter.taskNames.join(' ')
 
 develocity {
 
@@ -135,3 +135,4 @@ develocity {
     }
   }
 }
+*/

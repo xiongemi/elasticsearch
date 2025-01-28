@@ -18,6 +18,17 @@ plugins {
   id 'elasticsearch.java-toolchain'
 }
 
+develocity {
+    buildScan {
+        termsOfUseUrl = "https://gradle.com/help/legal-terms-of-use"
+        termsOfUseAgree = "yes"
+        
+        // publishing.onlyIf { false }
+      // If you don't need to auto-publish the build scan, uncomment it.
+       
+    }
+}
+
 enableFeaturePreview "STABLE_CONFIGURATION_CACHE"
 
 rootProject.name = "elasticsearch"

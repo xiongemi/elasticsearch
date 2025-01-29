@@ -1,6 +1,6 @@
 {
   "installation": {
-    "version": "20.4.0",
+    "version": "0.0.0-pr-29771-01aa6b4",
     "plugins": {
       "@nx/gradle": "0.0.0-pr-29771-01aa6b4"
     }
